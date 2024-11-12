@@ -18,10 +18,8 @@ pipeline {
         }
          stage("Docker-build") {
              steps {
-                  dir ("${DIZIN}") {
                        sh " docker build -t app.jar:latest . "
                        sh " docker run app-jar:latest "
-                     }
               }
          }
     }
